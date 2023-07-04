@@ -1,0 +1,30 @@
+public with sharing class AccountWrapper {
+  public class AWException extends exception{}
+
+  Account thisAccount;
+
+  public AccountWrapper(Account startWith){
+    thisAccount = startWith;
+  }
+
+// my edits
+
+
+
+
+
+  public Boolean isHighPriority(){
+    if(getRoundedAvgPriceOfOpps() > 10000.00){
+      return true;
+    }
+
+    if(getRoundedAvgPriceOfOpps() > 100000.00){
+      return true;
+    }
+
+
+
+
+    return false;
+  }
+}
